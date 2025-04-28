@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPEB Electricity Fault Monitoring System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header">
+    <h1>MPEB Electricity Fault Monitoring System</h1>
+    <div class="emergency-contact">Emergency Contact: 1912</div>
+</div>
+
+<div class="container">
+    <div class="info-panel">
+        <p><strong>Notification System:</strong> MPEB automatically sends updates about electricity faults and scheduled maintenance in your area through SMS and email. Updates are delivered in real-time as soon as information is available.</p>
+    </div>
+
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab('active-faults')">Active Faults</div>
+        <div class="tab" onclick="switchTab('scheduled-maintenance')">Scheduled Maintenance</div>
+    </div>
+
+    <!-- Active Faults Tab -->
+    <div id="active-faults" class="tab-content active">
+        <div class="fault-list">
+            <div class="fault-list-header">Current Electricity Faults</div>
+
+            <div class="fault-item">
+                <div>
+                    <div class="fault-location">Vijay Nagar, Zone 2, Indore</div>
+                    <div class="fault-time">Reported: Today, 10:30 AM | Expected Resolution: 12:30 PM</div>
+                    <div class="fault-details">Transformer failure causing power outage in 3 blocks</div>
+                </div>
+                <span class="fault-status status-ongoing">Ongoing</span>
+            </div>
+
+            <div class="fault-item">
+                <div>
+                    <div class="fault-location">Annapurna Road, Zone 1, Indore</div>
+                    <div class="fault-time">Reported: Today, 09:15 AM | Expected Resolution: 11:45 AM</div>
+                    <div class="fault-details">Underground cable damage affecting 200 households</div>
+                </div>
+                <span class="fault-status status-ongoing">Ongoing</span>
+            </div>
+
+            <div class="fault-item">
+                <div>
+                    <div class="fault-location">MG Road, Zone 3, Bhopal</div>
+                    <div class="fault-time">Reported: Today, 08:00 AM | Resolved: 10:15 AM</div>
+                    <div class="fault-details">Power fluctuations due to substation issue - RESOLVED</div>
+                </div>
+                <span class="fault-status status-resolved">Resolved</span>
+            </div>
+
+            <div class="fault-item">
+                <div>
+                    <div class="fault-location">New Market, Zone 1, Bhopal</div>
+                    <div class="fault-time">Reported: Yesterday, 06:30 PM | Resolved: 08:45 PM</div>
+                    <div class="fault-details">Distribution panel fault - RESOLVED</div>
+                </div>
+                <span class="fault-status status-resolved">Resolved</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scheduled Maintenance Tab -->
+    <div id="scheduled-maintenance" class="tab-content">
+        <div class="fault-list">
+            <div class="fault-list-header">Planned Maintenance Work</div>
+
+            <div class="fault-item">
+                <div>
+                    <div class="fault-location">AB Road, Zone 3, Indore</div>
+                    <div class="fault-time">Scheduled: Apr 28, 2025, 10:00 AM - 02:00 PM</div>
+                    <div class="fault-details">Transformer upgrade and line maintenance</div>
+                </div>
+                <span class="fault-status status-scheduled">Scheduled</span>
+            </div>
+
+            <div class="fault-item">
+                <div>
+                    <div class="fault-location">Kolar Road, Zone 2, Bhopal</div>
+                    <div class="fault-time">Scheduled: Apr 30, 2025, 09:00 AM - 01:00 PM</div>
+                    <div class="fault-details">Distribution network enhancement</div>
+                </div>
+                <span class="fault-status status-scheduled">Scheduled</span>
+            </div>
+
+            <div class="fault-item">
+                <div>
+                    <div class="fault-location">Scheme 78, Zone 1, Indore</div>
+                    <div class="fault-time">Scheduled: May 2, 2025, 08:00 AM - 12:00 PM</div>
+                    <div class="fault-details">Annual preventive maintenance</div>
+                </div>
+                <span class="fault-status status-scheduled">Scheduled</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-area">
+        <h2 class="search-title">Check Status for Your Area</h2>
+        <form class="search-form" id="area-search-form">
+            <div class="form-group">
+                <label for="pincode">PIN Code</label>
+                <input type="text" id="pincode" placeholder="Enter your PIN code" required>
+            </div>
+
+            <div class="form-group">
+                <label for="zone">Zone</label>
+                <select id="zone" required>
+                    <option value="">Select Zone</option>
+                    <option value="1">Zone 1</option>
+                    <option value="2">Zone 2</option>
+                    <option value="3">Zone 3</option>
+                    <option value="4">Zone 4</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" placeholder="Enter your city" required>
+            </div>
+
+            <button type="submit" class="search-button">Check Status</button>
+        </form>
+    </div>
+</div>
+
+<div class="footer">
+    <p>MPEB Electricity Fault Monitoring System &copy; 2025</p>
+    <p>For electricity emergencies, call: 1912</p>
+</div>
+</body>
+</html>
